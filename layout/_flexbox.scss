@@ -1,0 +1,92 @@
+/// custom flex display
+///
+/// @param {text} $direction
+///     main axis direction
+/// @param {text} $justify
+///     main axis display
+/// @param {text} $align
+///     perpendicular axis display
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+/*
+    direction: row
+    align: center
+*/
+.fcc {
+    @include flex;
+}
+.ffsc {
+    @include flex($justify: flex-start);
+}
+.ffec {
+    @include flex($justify: flex-end);
+}
+.fsbc {
+    @include flex($justify: space-between);
+}
+.fsac {
+    @include flex($justify: space-around);
+}
+
+/*
+    direction: row
+    align: flex-start
+*/
+.fcfs {
+    @include flex($align: flex-start);
+}
+.ffsfs {
+    @include flex($justify: flex-start, $align: flex-start);
+}
+.ffefs {
+    @include flex($justify: flex-end, $align: flex-start);
+}
+.fsbfs {
+    @include flex($justify: space-between, $align: flex-start);
+}
+.fsafs {
+    @include flex($justify: space-around, $align: flex-start);
+}
+
+/*
+    direction: row
+    justify: center
+*/
+.fcfs {
+    @include flex($align: flex-start);
+}
+.fcfe {
+    @include flex($align: flex-end);
+}
+.fcsb {
+    @include flex($align: space-between);
+}
+.fcsa {
+    @include flex($align: space-around);
+}
+
+/*
+    direction: col
+    align: center
+*/
+
+.fcolcc {
+    @include flex($direction: column);
+}
+.fcolfsc {
+    @include flex($direction: column, $justify: flex-start);
+}
+.fcolfec {
+    @include flex($direction: column, $justify: flex-end);
+}
+.fcolsbc {
+    @include flex($direction: column, $justify: space-between);
+}
+.fcolsac {
+    @include flex($direction: column, $justify: space-around);
+}

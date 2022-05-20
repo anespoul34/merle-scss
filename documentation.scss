@@ -1,0 +1,19 @@
+/*
+    min AND max
+*/
+$padding: 12px;
+.content {
+    width: min(100px, calc(1rem + 10%)); // min(100px, 1rem + 10%)
+}
+.post {
+    // Since these max() calls are valid calculation expressions, they're
+    // parsed as calculations.
+    padding-left: max($padding, env(safe-area-inset-left));
+    padding-right: max($padding, env(safe-area-inset-right));
+}
+.sidebar {
+    // Since these use the SassScript-only modulo operator, they're parsed as
+    // SassScript function calls.
+    padding-left: max($padding % 10, 20px);
+    padding-right: max($padding % 10, 20px);
+}
