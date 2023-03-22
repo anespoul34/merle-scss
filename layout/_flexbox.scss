@@ -90,3 +90,6 @@
 .fcolsac {
     @include flex($direction: column, $justify: space-around);
 }
+.fcolcfs {
+    @include flex($direction: column, $align: flex-start);
+}

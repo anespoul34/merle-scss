@@ -1,4 +1,52 @@
-html, 
+@use 'typography' as *;
+@use '../abstract' as *;
+
+html {
+    font-size: 62.5%;
+}
+@media screen and (max-width: 1360px) {
+    html {
+        font-size: 45%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 40%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 40%;
+    }
+}
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 35%;
+    }
+}
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 35%;
+    }
+}
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 35%;
+    }
+}
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 35%;
+    }
+}
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 35%;
+    }
+}
+
+
+html,
 body {
     margin: 0;
     padding: 0;
@@ -7,4 +55,41 @@ body {
     > * {
         box-sizing: border-box;
     }
+}
+
+div {
+    box-sizing: border-box;
+}
+
+span, h1, a, i {
+    color: $primary;
+}
+
+h1 {
+    font: {
+        family: $font;
+        size: $tSize2;
+        weight: 900;
+    }
+}
+
+span, i {
+    font: {
+        family: $font;
+        size: $tSize1;
+    }
+}
+
+a {
+    font: {
+        family: $font;
+        size: $tSize1;
+    }
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
 }
